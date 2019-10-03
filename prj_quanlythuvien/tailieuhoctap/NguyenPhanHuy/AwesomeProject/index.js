@@ -11,5 +11,6 @@ import LotsOfStyles from './Styles';
 import FixedDimension from './FixedDe';
 import FlexDimension from './FlexDe';
 import DSSanPham from './DSSanPham';
+import LoginScreen from './FetchExample';
 
-AppRegistry.registerComponent(appName, () => DSSanPham);
+AppRegistry.registerComponent(appName, () => LoginScreen);

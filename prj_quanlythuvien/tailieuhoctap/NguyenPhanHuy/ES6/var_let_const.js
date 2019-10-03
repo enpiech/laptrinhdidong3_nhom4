@@ -3,7 +3,7 @@ const A = "Const is unchangeable variable";
 
 var x = 'global'
 let y = 'global'
-console.log("${this.x}") // => global
+console.log(' ', x) // => global
 // console.lot(this.y) => undefined
 
 let name = 'Lam Pham';
@@ -19,6 +19,7 @@ function dumb() {
     }
     console.log(x) // => still 2
 }
+dumb()
 
 function anotherDumb() {
     let x = 1
@@ -28,6 +29,7 @@ function anotherDumb() {
     }
     console.log(x) // => 1
 }
+anotherDumb()
 
 function dumbVarLoop() {
     for (var i = 0; i < 3; ++i) {
@@ -36,9 +38,12 @@ function dumbVarLoop() {
     // output: 3 3 3
 }
 
+dumbVarLoop()
+
 function dumbLetLoop() {
     for (let i = 0; i < 3; ++i) {
         setTimeout(() => console.log(i, " "), 1000)
     }
     // output: 0 1 2
 }
+dumbLetLoop()
