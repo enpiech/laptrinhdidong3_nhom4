@@ -11,20 +11,23 @@ class Square extends Point {
         this.id = id
         this.x = x
         this.y = y
+        this.length = length
     }
 
     isInside(point) {
         if (point.x >= this.x 
-            && point.x <= (this.x + length) 
+            && point.x <= (this.x + this.length) 
             && point.y >= this.y
-            && point.y <= (this.y + length)) {
+            && point.y <= (this.y + this.length)) {
                 return true;
             }
         return false;
     }
 }
 
-let sqr = new Square(0, 1, 2, 2)
+let sqr = new Square(0, 1, 3, 2)
 console.log(sqr)
 let pts = new Point(0, 0)
+console.log(sqr.isInside(pts))
+pts = new Point(99, 3)
 console.log(sqr.isInside(pts))

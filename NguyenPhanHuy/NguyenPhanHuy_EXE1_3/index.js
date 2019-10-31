@@ -13,4 +13,4 @@ import FlexDimension from './FlexDe';
 import DSSanPham from './DSSanPham';
 import LoginScreen from './FetchExample';
 
-AppRegistry.registerComponent(appName, () => LoginScreen);
+AppRegistry.registerComponent(appName, () => App);
